@@ -59,5 +59,6 @@ export const authOptions = {
     // newUser: '/auth/new-user' // New users will be directed here on first sign in (leave the property out if not of interest)
   },
   debug: process.env.NODE_ENV === "development" ? true : false,
+  secret: process.env.NEXTAUTH_SECRET,
 };
 export default NextAuth(authOptions);
