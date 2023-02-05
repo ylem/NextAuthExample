@@ -12,16 +12,17 @@ export default function Home() {
   function button() {
     if (session) {
       return (
-        <Button onClick={() => signOut({ redirect: false, callbackUrl: "/" })}>
+        <Button
+          colorScheme="red"
+          onClick={() => signOut({ redirect: false, callbackUrl: "/" })}
+        >
           Sign out
         </Button>
       );
     } else {
       return (
         <NextLink href="/auth/signin">
-          <Button colorScheme="teal" variant="ghost">
-            Sign in
-          </Button>
+          <Button colorScheme="blue">Sign in</Button>
         </NextLink>
       );
     }
