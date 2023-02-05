@@ -6,7 +6,7 @@ export const authOptions = {
     CredentialsProvider({
       name: "Credentials",
       async authorize(credentials, req) {
-        const url = `${process.env.NEXT_PUBLIC_API_URL}/login`;
+        const url = `${process.env.API_URL}/login`;
         const res = await fetch(url, {
           method: "POST",
           body: JSON.stringify({
